@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carousel Example</title>
+    <link href="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="index.js" defer></script>
 </head>
 <body>
+    <h2>Carrossel ChatGPT</h2>
     <div class="carousel">
         <div class="carousel-content">
             <div class="carousel-item">
@@ -25,5 +29,37 @@
             <button class="carousel-next">Próximo</button>
           </div>
     </div>
+    <h2>Carrossel Splide.js</h2>
+    <section class="splide" aria-label="Splide Basic HTML Example">
+        <div class="splide__track">
+              <ul class="splide__list">
+                  <li class="splide__slide">
+                    <img src="img/img2.jpeg" alt="">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="img/img3.jpeg" alt="">
+                   </li>
+                  <li class="splide__slide">
+                    <img src="img/img1.jpeg" alt="">
+                  </li>
+              </ul>
+        </div>
+      </section>
+
+      <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function(){
+          var splide = new Splide('.splide', {
+            type: "loop",
+            perPage: 1,
+            height: '20rem',
+            width: '500px',
+            cover: true,
+            heightRatio: 0.5
+          });
+          splide.mount();
+        });
+      </script>
 </body>
 </html>
